@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="catalog.compare.link" remove="true" />
+        <referenceBlock name="my-account-link" remove="true" />
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="authorization-link" remove='true' />
+        <referenceBlock name="skip_to_content" remove='true' />
+        <referenceBlock name="header" remove='true' />
+        <referenceBlock name="footer" remove='true'/>
+
+        <referenceContainer name="header.panel">
+            <container name="top.header.custom" htmlClass="section-top-header" htmlTag="div" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="header-top-left" before="-" template="Magento_Theme::header/top/top_header_left.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="header-top-center" template="Magento_Theme::header/top/top_header_center.phtml" />
+                <container name="top.header.custom.end" htmlClass="section-top-header-end" htmlTag="div" after="-">
+                    <block class="Magento\Framework\View\Element\Template" name="header-top-right" before="-" template="Magento_Theme::header/top/top_header_right.phtml" />
+                    <block class="Magento\Store\Block\Switcher" name="store_language" as="store_language" template="Magento_Store::switch/languages.phtml">
+                        <arguments>
+                            <argument name="view_model" xsi:type="object">Magento\Store\ViewModel\SwitcherUrlProvider</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+        </referenceContainer>
+
+<!--        <move element="store_switcher" destination="top.header.custom" after="-" />-->
+    </body>
+</page>

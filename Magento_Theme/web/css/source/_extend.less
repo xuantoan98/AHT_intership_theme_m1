@@ -1,0 +1,30 @@
+/**
+    CSS Global
+ */
+& when (@media-common=true) {
+    .section-top-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/**
+    CSS Screen m
+ */
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {}
+
+/**
+    CSS Screen m
+ */
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {}
+
+/**
+    CSS Screen l
+ */
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {}
+
+/**
+    CSS Screen xl
+ */
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {}

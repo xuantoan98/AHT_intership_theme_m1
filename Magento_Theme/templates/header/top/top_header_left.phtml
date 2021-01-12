@@ -1,0 +1,20 @@
+<div class="left">
+    <div class="phone">
+        <i class="fa fa-address-book" aria-hidden="true"></i>
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('phone-top-header')
+            ->toHtml();
+        ?>
+    </div>
+
+    <div class="email">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('email-top-header')
+            ->toHtml();
+        ?>
+    </div>
+</div>
