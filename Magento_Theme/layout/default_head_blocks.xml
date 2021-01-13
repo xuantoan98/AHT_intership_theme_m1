@@ -7,7 +7,9 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="../web/css/line-awesome/line-awesome.min.css" />
-        <css src="../web/css/font-awesome/font-awesome.min.css" />
+<!--        <css src="../web/css/line-awesome/line-awesome.min.css" />-->
+<!--        <css src="../web/css/font-awesome/font-awesome.min.css" />-->
+
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" src_type="url" rel="stylesheet" type="text/css" />
     </head>
 </page>

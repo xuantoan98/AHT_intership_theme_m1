@@ -2,22 +2,339 @@
     CSS Global
  */
 & when (@media-common=true) {
+    .page-wrapper {
+        ul,
+        li,
+        a,
+        p {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+    }
     .section-top-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: @color-font-top-header;
+
+        & span,
+        & a {
+            color: @color-font-top-header;
+            text-decoration: none;
+            transition: .2s ease;
+        }
+
+        & a {
+            &:hover {
+                color: @color-font-top-header-hover;
+                span {
+                    color: @color-font-top-header-hover;
+                }
+            }
+        }
+
+        & p {
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+        }
     }
+
+    .footer-bottom-box,
+    .footer-container-box {
+        max-width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-container-box {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        color: @color-font-top-header;
+
+        li,
+        a {
+            color: @color-font-top-header;
+            transition: .2s ease;
+            &:hover {
+                color: @color-font-top-header-hover;
+            }
+        }
+    }
+}
+
+/**
+    CSS Screen s
+ */
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {}
+
+/**
+    CSS Screen m
+ */
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+
 }
 
 /**
     CSS Screen m
  */
-.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {}
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .page-wrapper {
+        .panel.wrapper {
+            border: none;
+        }
 
-/**
-    CSS Screen m
- */
-.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {}
+        .panel.header {
+            max-width: 100%;
+            background-color: @background-color-top-header;
+            padding: 0;
+            margin: 0;
+        }
+
+        & .section-top-header{
+            height: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .left,
+            .section-top-header-end,
+            .section-top-header-end .right{
+                display: flex;
+                align-items: center;
+            }
+
+            .left {
+                & .phone,
+                & .email{
+                    display: inline-flex;
+                    align-items: center;
+                    & em {
+                        margin-right: 6px;
+                        font-size: 16px;
+                    }
+                }
+
+                & .email {
+                    margin-left: 18px;
+                    p {
+                        letter-spacing: -0.3px;
+                    }
+                }
+            }
+
+            .center {
+                margin-left: -99px;
+                letter-spacing: 0.1px;
+                span.cr {
+                    color: red;
+                }
+            }
+
+            .section-top-header-end {
+                margin-right: 18px;
+                .right {
+                    .change-language {
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+
+        .page-footer {
+            background-color: @background-color-top-header;
+            padding: 80px 0;
+            p,
+            a,
+            li {
+                font-size: 14px;
+            }
+            .footer-container-box {
+                .footer-contact {
+                    width: 25%;
+                    img {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .footer-category,
+                .footer-information,
+                .footer-links {
+                    width: 16.66666667%;
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: @color-font-title-footer;
+                        margin-bottom: 30px;
+                        margin-top: -4px;
+                        margin-left: 1.5px;
+                        letter-spacing: 0.6px;
+                    }
+
+                    ul {
+                        margin-top: -3px;
+                        margin-left: 2px;
+                        li {
+                            line-height: 35px;
+                        }
+                    }
+                }
+
+                .footer-category {
+                    .footer-category-container {
+                        ul {
+                            li {
+                                a {
+                                    letter-spacing: -0.1px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer-information {
+                    .footer-information-container {
+                        ul {
+                            margin-left: 1px;
+                            li {
+                                a {
+                                    letter-spacing: 0.1px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer-links {
+                    .footer-links-container {
+                        p {
+                            margin-left: 0px;
+                            letter-spacing: 0.9px;
+                        }
+
+                        ul {
+                            margin-left: 0px;
+                        }
+                    }
+                }
+
+                .footer-subscribe {
+                    max-width: 23%;
+                    .footer-contact,
+                    .block.newsletter,
+                    .footer-contact {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+
+                    .footer-subscribe-container {
+                        p {
+                            margin-top: -4px;
+                            line-height: 23px;
+                            margin-left: -1px;
+                        }
+                    }
+
+                    .block.newsletter {
+                        margin-top: 16px;
+                        margin-bottom: 23px;
+
+                        .content {
+                            border: 1px solid #222;
+                            border-radius: 30px;
+                            overflow: hidden;
+                            background-color: @background-white;
+                            width: 268px;
+
+                            .actions {
+                                padding: 0;
+                                button.action.subscribe {
+                                    background-color: @background-black;
+                                    border: none;
+                                    border-radius: 30px;
+                                    height: 40px;
+                                    margin-top: 2px;
+                                    margin-right: 2px;
+                                    width: 110px;
+                                    padding-left: 15px;
+
+                                    span {
+                                        letter-spacing: 0.5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        & .field {
+                            & .control {
+                                &::before{
+                                    display: none;
+                                }
+
+                                 & input {
+                                     height: 44px;
+                                     border: none;
+                                     padding-left: 14px;
+                                     margin-top: -1px;
+                                     margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-bottom-end {
+            padding: 20px 0;
+            line-height: 1;
+            background-color: @background-white;
+            color: @color-font-top-header;
+
+            ul {
+                li {
+                    a {
+                        color: @color-font-top-header;
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            .footer-bottom-box {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 7px;
+
+                .footer-bottom-copyright {
+                    padding-left: 15px;
+
+                    p {
+                        letter-spacing: 0.1px;
+                        margin-left: 1px;
+
+                        span.ft {
+                            color: @color-font-top-header-hover;
+                        }
+                    }
+                }
+
+                .footer-bottom-menu {
+                    padding-right: 15px;
+
+                    ul {
+                        display: flex;
+                        li {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /**
     CSS Screen l

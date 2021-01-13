@@ -16,6 +16,8 @@
         <referenceBlock name="skip_to_content" remove='true' />
         <referenceBlock name="header" remove='true' />
         <referenceBlock name="footer" remove='true'/>
+        <referenceBlock name="navigation.sections" remove='true'/>
+        <referenceContainer name="header-wrapper" remove='true'/>
 
         <referenceContainer name="header.panel">
             <container name="top.header.custom" htmlClass="section-top-header" htmlTag="div" before="-">
@@ -32,6 +34,43 @@
             </container>
         </referenceContainer>
 
-<!--        <move element="store_switcher" destination="top.header.custom" after="-" />-->
+        <referenceContainer name="footer-container">
+            <container name="footer.container.box" htmlClass="footer-container-box" htmlTag="div" before="-">
+                <container name="footer.contact" htmlClass="footer-contact" htmlTag="div" before="-">
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-contact" before="-" template="Magento_Theme::footer/footer_contact.phtml" />
+                </container>
+
+                <container name="footer.category" htmlClass="footer-category" htmlTag="div" >
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-category" before="-" template="Magento_Theme::footer/footer_category.phtml" />
+                </container>
+
+                <container name="footer.information" htmlClass="footer-information" htmlTag="div" >
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-information" before="-" template="Magento_Theme::footer/footer_information.phtml" />
+                </container>
+
+                <container name="footer.links" htmlClass="footer-links" htmlTag="div" >
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-links" before="-" template="Magento_Theme::footer/footer_links.phtml" />
+                </container>
+
+                <container name="footer.subscribe" htmlClass="footer-subscribe" htmlTag="div" after="-">
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-subscribe" before="-" template="Magento_Theme::footer/footer_subscribe.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-subscribe-payment" after="form.subscribe" template="Magento_Theme::footer/footer_subscribe_payment.phtml" />
+                </container>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="before.body.end">
+            <container name="footer.bottom.end" htmlClass="footer-bottom-end" htmlTag="div">
+                <block class="Magento\Framework\View\Element\Template" name="block-footer-bottom-end" before="-" template="Magento_Theme::footer/footer_bottom_end.phtml" />
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="page.top">
+            <container name="navigation.sections.custom" htmlClass="sections-navigation" htmlTag="div" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="block-footer-bottom-end" before="-" template="Magento_Theme::header/navigation/sections-navigation.phtml" />
+            </container>
+        </referenceContainer>
+
+        <move element='form.subscribe' destination="footer.subscribe" after="block-footer-subscribe"/>
     </body>
 </page>

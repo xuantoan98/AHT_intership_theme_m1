@@ -1,0 +1,28 @@
+<div class="section-navigation-box">
+    <div class="nav-left">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('nav-left')
+            ->toHtml();
+        ?>
+    </div>
+
+    <div class="nav-center">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('nav-center')
+            ->toHtml();
+        ?>
+    </div>
+
+    <div class="nav-right">
+        <?php
+        echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('nav-right')
+            ->toHtml();
+        ?>
+    </div>
+</div>

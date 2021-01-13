@@ -1,18 +1,18 @@
-<div class="right">
-    <div class="social-login">
+<div class="footer-bottom-box">
+    <div class="footer-bottom-copyright">
         <?php
         echo $block->getLayout()
             ->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('social-top-header')
+            ->setBlockId('footer-copyright')
             ->toHtml();
         ?>
     </div>
 
-    <div class="change-language">
+    <div class="footer-bottom-menu">
         <?php
         echo $block->getLayout()
             ->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('language-top-header')
+            ->setBlockId('footer-menu')
             ->toHtml();
         ?>
     </div>
