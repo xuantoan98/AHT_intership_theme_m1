@@ -43,7 +43,8 @@
     }
 
     .footer-bottom-box,
-    .footer-container-box {
+    .footer-container-box,
+    .section-navigation-box {
         max-width: 1200px;
         padding-right: 15px;
         padding-left: 15px;
@@ -143,6 +144,36 @@
                 }
             }
         }
+
+        .sections-navigation {
+            .section-navigation-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .nav-left {
+                    padding-left: 15px;
+                }
+
+                .nav-center {
+                    ul {
+                        display: flex;
+                        align-items: center;
+
+                        li {
+                            a {
+                                color: @color-font-title-footer;
+                            }
+                        }
+                    }
+                }
+
+                .nav-right {
+                    padding-right: 15px;
+                }
+            }
+        }
+
 
         .page-footer {
             background-color: @background-color-top-header;
