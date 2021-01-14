@@ -38,6 +38,7 @@
             <container name="footer.container.box" htmlClass="footer-container-box" htmlTag="div" before="-">
                 <container name="footer.contact" htmlClass="footer-contact" htmlTag="div" before="-">
                     <block class="Magento\Framework\View\Element\Template" name="block-footer-contact" before="-" template="Magento_Theme::footer/footer_contact.phtml" />
+                    <block class="Magento\Framework\View\Element\Template" name="block-footer-contact-social" template="Magento_Theme::footer/footer_contact_social.phtml" />
                 </container>
 
                 <container name="footer.category" htmlClass="footer-category" htmlTag="div" >
@@ -68,6 +69,7 @@
         <referenceContainer name="page.top">
             <container name="navigation.sections.custom" htmlClass="sections-navigation" htmlTag="div" before="-">
                 <block class="Magento\Framework\View\Element\Template" name="block-footer-bottom-end" before="-" template="Magento_Theme::header/navigation/sections-navigation.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="block-dropdown-user" after="block-footer-bottom-end" template="Magento_Theme::header/navigation/dropdown-user.phtml" />
             </container>
         </referenceContainer>
 
