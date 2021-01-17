@@ -32,6 +32,9 @@
                     </block>
                 </container>
             </container>
+            <container name="navigation.responsive.custom" htmlClass="section-nav-responsive" htmlTag="div">
+                <block class="Magento\Framework\View\Element\Template" name="nav-responsive" before="-" template="Magento_Theme::header/navigation/sections-navigation-mobile.phtml" />
+            </container>
         </referenceContainer>
 
         <referenceContainer name="footer-container">
@@ -68,7 +71,7 @@
 
         <referenceContainer name="page.top">
             <container name="navigation.sections.custom" htmlClass="sections-navigation" htmlTag="div" before="-">
-                <block class="Magento\Framework\View\Element\Template" name="block-footer-bottom-end" before="-" template="Magento_Theme::header/navigation/sections-navigation.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="section-navigation" before="-" template="Magento_Theme::header/navigation/sections-navigation.phtml" />
                 <block class="Magento\Framework\View\Element\Template" name="block-dropdown-user" after="block-footer-bottom-end" template="Magento_Theme::header/navigation/dropdown-user.phtml" />
             </container>
         </referenceContainer>

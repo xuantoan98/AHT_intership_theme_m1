@@ -26,3 +26,29 @@
         ?>
     </div>
 </div>
+
+<div class="section-navigation-mobile">
+    <?php
+    echo $block->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('nav-mobile')
+        ->toHtml();
+    ?>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.section-navigation-mobile').find('p').find('em.la-bars').on('click', function() {
+                $('.section-nav-responsive').addClass('toShow');
+            });
+
+            $('.section-navigation-responsive').find('em.la-times').on('click', function() {
+                $('.section-nav-responsive').removeClass('toShow');
+            });
+        });
+    });
+</script>
