@@ -44,10 +44,12 @@
         $(document).ready(function () {
             $('.section-navigation-mobile').find('p').find('em.la-bars').on('click', function() {
                 $('.section-nav-responsive').addClass('toShow');
+                $('body').addClass('hiddenCustom');
             });
 
             $('.section-navigation-responsive').find('em.la-times').on('click', function() {
                 $('.section-nav-responsive').removeClass('toShow');
+                $('body').removeClass('hiddenCustom');
             });
         });
     });
