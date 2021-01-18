@@ -37,9 +37,9 @@
             top: 0;
             left: -1920px;
             width: 320px;
-            z-index: 1;
+            z-index: 2;
             background-color: @background-white;
-            transition: 0.3s ease-in;
+            transition: 0.5s ease-in;
             height: 100%;
 
             .section-navigation-responsive {
@@ -86,10 +86,11 @@
 
             &.toShow {
                 left: 0;
-                transition: 0.3s ease-out;
+                transition: 0.5s ease-out;
                 &:after {
                     content: "";
                     opacity: .6;
+                    left: 320px;
                 }
             }
 
@@ -99,10 +100,10 @@
                 position: fixed;
                 width: 100%;
                 height: 100%;
-                left: 320px;
+                left: -1920px;
                 top: 0;
                 opacity: 0;
-                -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+                -webkit-transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
                 z-index: -1;
             }
         }
@@ -464,6 +465,8 @@
         }
 
         .sections-navigation {
+            z-index: 1;
+            
             .section-navigation-box {
                 display: none;
             }
@@ -751,6 +754,8 @@
 
         .sections-navigation {
             padding: 20px 0;
+            z-index: 1;
+
             .section-navigation-mobile {
                 display: flex;
                 justify-content: space-between;
@@ -1123,8 +1128,10 @@
 
                     ul {
                         display: flex;
-                        li {
-
+                        li:hover {
+                            a {
+                                color: @color-font-top-header-hover;
+                            }
                         }
                     }
                 }
@@ -1143,6 +1150,14 @@
 
         .page-footer {
             .footer-container-box {
+
+                .footer-contact,
+                .footer-category,
+                .footer-information,
+                .footer-links {
+                    margin-bottom: 0px;
+                }
+
                 .footer-contact {
                     width: 25%;
                 }
