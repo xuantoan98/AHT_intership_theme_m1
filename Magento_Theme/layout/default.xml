@@ -8,7 +8,7 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="register-link" remove="true" />
-        <referenceBlock name="wish-list-link" remove="true" />
+<!--        <referenceBlock name="wish-list-link" remove="true" />-->
         <referenceBlock name="catalog.compare.link" remove="true" />
         <referenceBlock name="my-account-link" remove="true" />
         <referenceBlock name="header" remove="true" />
@@ -72,10 +72,11 @@
         <referenceContainer name="page.top">
             <container name="navigation.sections.custom" htmlClass="sections-navigation" htmlTag="div" before="-">
                 <block class="Magento\Framework\View\Element\Template" name="section-navigation" before="-" template="Magento_Theme::header/navigation/sections-navigation.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="block-dropdown-user" after="block-footer-bottom-end" template="Magento_Theme::header/navigation/dropdown-user.phtml" />
+<!--                <block class="Magento\Framework\View\Element\Template" name="block-dropdown-user" after="block-footer-bottom-end" template="Magento_Theme::header/navigation/dropdown-user.phtml" />-->
             </container>
         </referenceContainer>
 
         <move element='form.subscribe' destination="footer.subscribe" after="block-footer-subscribe"/>
+        <move element='top.search' destination="navigation.sections.custom" after="section-navigation"/>
     </body>
 </page>

@@ -386,7 +386,7 @@
 
                     ul.social {
                         position: absolute;
-                        background-color: #fff;
+                        background-color: @background-white;
                         padding: 10px 20px;
                         top: 70px;
                         right: -10px;
@@ -410,14 +410,14 @@
 
                             &:hover {
                                 background-color: #000;
-                                color: #fff;
+                                color: @background-white;
                             }
                         }
                     }
 
                     ul.myaccount {
                         position: absolute;
-                        background-color: #fff;
+                        background-color: @background-white;
                         top: 40px;
                         opacity: 0;
                         transition: 0.3s;
@@ -466,7 +466,7 @@
 
         .sections-navigation {
             z-index: 1;
-            
+
             .section-navigation-box {
                 display: none;
             }
@@ -756,6 +756,15 @@
             padding: 20px 0;
             z-index: 1;
 
+            .section-navigation-box {
+                a {
+                    color: @color-font-top-header;
+                    &:hover {
+                        color: @color-font-top-header-hover;
+                    }
+                }
+            }
+
             .section-navigation-mobile {
                 display: flex;
                 justify-content: space-between;
@@ -795,6 +804,7 @@
                         &:nth-child(3) {
                             position: relative;
                             margin-right: 20px;
+
                             &:before {
                                 content: '0';
                                 position: absolute;
@@ -835,6 +845,17 @@
                     margin-top: -8px;
                 }
             }
+
+            .block.block-search {
+                opacity: 0;
+                right: 155px;
+                top: 50px;
+                transition: .2s ease-in;
+                &.toShow {
+                    top: -15px;
+                    opacity: 1;
+                }
+            }
         }
 
         .section-top-header {
@@ -861,7 +882,7 @@
 
                         ul {
                             position: absolute;
-                            background-color: #fff;
+                            background-color: @background-white;
                             padding: 10px 20px;
                             top: 50px;
                             right: -22px;
@@ -876,11 +897,11 @@
                         &:hover ul {
                             top: 27px !important;
                             opacity: 1 !important;
-                            z-index: 1 !important;
+                            z-index: 999 !important;
                         }
 
                         em {
-                            // margin-top: 8px;
+                            margin-top: 8px;
                             &::before {
                                 font-size: 18px;
                             }
@@ -904,8 +925,8 @@
                             cursor: pointer;
 
                             &:hover {
-                                background-color: #000;
-                                color: #fff;
+                                background-color: @background-black;
+                                color: @background-white;
                             }
                         }
                     }

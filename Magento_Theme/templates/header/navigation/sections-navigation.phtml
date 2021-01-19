@@ -51,6 +51,15 @@
                 $('.section-nav-responsive').removeClass('toShow');
                 $('body').removeClass('hiddenCustom');
             });
+
+            $('em.la-search').on('click', function() {
+                $('div.block.block-search').toggleClass('toShow');
+            });
+
+            // $(document).on('click', function() {
+            //     console.log(11111)
+            //     $('div.block.block-search').removeClass('toShow');
+            // });
         });
     });
 </script>
